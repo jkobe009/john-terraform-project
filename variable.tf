@@ -44,6 +44,13 @@ variable "private_data_subnet_az2_cidr" {
 # security group variables
 variable "ssh_location" {
   default     = "0.0.0.0/0"
-  description = "the ip address that can ssh into the ec2"
+  description = "the ip address that can ssh into the ec2 instances"
+  type        = string
+}
+
+# application load balancer variables
+variable "ssl_certicate_arn" {
+  default     = "arn:aws:acm:us-east-1:027163438717:certificate/acba3a62-b045-45a8-98eb-bca61b1abeb9"
+  description = "ssl certificate arn"
   type        = string
 }
